@@ -1,0 +1,18 @@
+.container{
+    height: 100vh;
+    background: linear-gradient(to bottom right, rgba(146,84,200,1) 41%, rgba(154,177,255,1) 89%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.log_sign{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background: white;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width:60%;
+}

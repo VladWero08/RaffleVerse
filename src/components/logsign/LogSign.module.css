@@ -1,0 +1,89 @@
+.container{
+    height: 100vh;
+    background: linear-gradient(to bottom right, rgba(146,84,200,1) 41%, rgba(154,177,255,1) 89%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.log_sign{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background: white;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width:60%;
+}
+
+.log_sign_right{
+    flex:1;
+    background:white;
+}
+
+.log_sign_form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding:3rem;
+}
+
+.log_sign_form label{ margin-bottom: 0.25rem; font-size:18px; font-weight: 600;}
+.log_sign_form input{ margin-bottom: 1rem; padding:0.5rem; border-radius: 5px; border:1px solid gray}
+
+.form_checkbox{
+    display: flex;
+}
+
+.form_checkbox span{font-size: 12px; line-height: 17px; font-weight: 600;}
+.btn_log_sign, .btn_metamask{
+    background: linear-gradient(to bottom right, rgba(146,84,200,1) 41%, rgba(154,177,255,1) 89%);
+    color: white;
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+    padding:0.75rem;
+    border:none;
+    border-radius: 15px;
+}
+
+.btn_metamask{
+    background: rgba(154,177,255,1);
+    width:clamp(100px,150px,200px);
+}
+
+.metamask_error{
+    color:red;
+    padding:0.5rem 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.sign_split{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error_message, .success_message{
+    background-color: rgb(233, 136, 136);
+    color: white;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.error_message img, .success_message img{
+    height: 40px;
+    width: 40px;
+}
+
+.success_message{ background-color: rgb(89, 199, 98); }
+.form_wallet{ display: none;}

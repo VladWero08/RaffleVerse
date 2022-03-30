@@ -1,0 +1,53 @@
+.log_sign_left{
+    flex:1;
+    background: url('login.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:3rem;
+    border-radius: 50px;
+}
+
+.log_sign_glass{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    padding:1rem;
+    color:white;
+}
+
+.log_sign_glass p{
+    padding-top: 0.5rem;
+    padding-bottom: 14rem;
+    font-size:20px;
+}
+
+.logo{
+    background: rgba( 255, 255, 255, 0.25 );
+    padding:1rem;
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+.small_matic_logo{
+    height:15px;
+    width:15px;
+}
+
+.btn_sign_log_switch{
+    background: transparent;
+    border: none;
+    font-family: 'Rubik', sans-serif;
+    color:white;
+    font-weight: 600;
+    font-size: 16px;
+    padding:0;
+}
+.btn_sign_log_switch:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
