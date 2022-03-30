@@ -1,0 +1,126 @@
+/* Flex box */
+.home_live_raffle_name, .home_last_raffle_name, .home_last_raffle_info{
+    display: flex;
+}
+
+.highlight{
+    color:var(--third);
+    font-style: italic;
+}
+
+.last_raffle_text{
+    position: absolute;
+    right:2rem;
+    font-weight: 600;
+    text-align: center;
+    transform: rotate(30deg);
+    background:var(--third);
+    padding:0.75rem;
+}
+
+.home_layout{
+    min-height: 80vh;
+    background: var(--main);
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+        "box1 box1 box2 box2 box4 box4"
+        "box1 box1 box2 box2 box4 box4"
+        "box1 box1 box2 box2 box5 box5"
+        "box1 box1 box3 box3 box5 box5";
+    grid-gap:1rem;
+    padding:3rem;
+    color:white;
+}
+
+.home_rules{
+    background: linear-gradient(to bottom right, rgba(146,84,200,1) 51%, rgba(154,177,255,1) 89%);
+    padding:3rem;
+    grid-area:box1;
+}
+
+.home_rules h2{
+    padding: 1rem 0rem 0.8rem 0rem;
+}
+
+.home_live_raffle_name{
+    background:url("login.png");
+    background-position: center;
+    background-size: cover;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    grid-area: box2;
+
+    text-align: center;
+    padding:1rem;
+}
+
+.home_live_raffle_name h4{
+    padding:0.5rem;
+}
+
+.buy_ticket{
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    padding:0.75rem;
+}
+
+.buy_ticket img{
+    width:50%;
+}
+
+.buy_ticket button{
+    background: transparent;
+    border:none;
+    color:white;
+    font-size:26px;
+}
+
+.home_live_raffle_info{
+    background-color: var(--second);
+    grid-area: box3;
+    padding:1.5rem;
+}
+
+.home_live_raffle_info h3{
+    padding-top:0.75rem;
+}
+
+.home_last_raffle_name{
+    position: relative;
+    background:url("last-raffle.jpg");
+    background-position: center;
+    background-size: cover;
+    grid-area: box4;
+    grid-area: box4;
+    padding:1.5rem 1.5rem 0 1.5rem;
+
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: center;
+}
+
+.transparent{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    padding:0.5rem 0rem;
+}
+
+.home_last_raffle_info{
+    background: linear-gradient(to bottom right, rgba(154,177,255,1) 21%, rgba(146,84,200,1) 89%);
+    grid-area: box5;
+    justify-content: center;
+    flex-direction: column;
+    padding:1.5rem;
+}
+
+.home_last_raffle_info h3:not(:last-child){
+    padding-bottom:0.75rem;
+}

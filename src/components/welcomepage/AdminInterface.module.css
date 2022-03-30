@@ -1,0 +1,97 @@
+.admin_layout{
+    background: var(--main);
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+        "box1 box1 box2"
+        "box1 box1 box3";
+    grid-gap:1rem;
+    padding:3rem;
+    color:white;
+}
+
+.admin_create_raffle{
+    background:url("login.png");
+    background-position: center;
+    background-size: cover;
+    padding:3rem;
+    grid-area: box3;
+
+}
+
+.admin_create_raffle h1{ margin-bottom: 1rem; }
+
+.admin_statistics{
+    background: linear-gradient(to bottom right, rgba(146,84,200,1) 51%, rgba(154,177,255,1) 89%);
+    grid-area: box1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}  
+
+.admin_statistics h1:nth-child(2){
+    margin:1rem 0rem;
+}
+
+.admin_last_participants{
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    padding:1.5rem;
+    margin:1rem 0rem;
+}
+
+.admin_last_participants h1:not(:first-child){
+    margin-top:1rem;
+}
+
+/* LAST 3 RAFFLES */
+
+.admin_last_3_raffles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--second);
+    grid-area: box2;
+}
+
+.admin_last_3_raffles h1{
+    margin-bottom: 0.75rem;
+}
+
+.last_raffles_stats{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+/* NEW RAFFLE */
+
+
+.new_raffle_form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.new_raffle_form label{ margin-bottom: 0.25rem; font-size:18px; font-weight: 600;}
+.new_raffle_form input{ margin-bottom: 1rem; padding:0.5rem; border-radius: 5px; border:1px solid gray}
+.new_raffle_form input:focus{outline:none;}
+
+.btn_create_raffle{
+    background: linear-gradient(to bottom right, rgba(146,84,200,1) 41%, rgba(154,177,255,1) 89%);
+    color: white;
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+    padding:0.75rem;
+    border:none;
+    border-radius: 15px;
+}
+
+.end_raffle{
+    background: var(--third);
+}
