@@ -1,5 +1,5 @@
 # RaffleVerse
-## - raffle project with smart contracts in solidity, integrated with ReactJS and FirebaseJS
+## raffle project with smart contracts in solidity, integrated with ReactJS and FirebaseJS
 
 ### User Interface:
 
