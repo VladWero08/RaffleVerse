@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.7;
 
-//Import SafeMath online
+// Import SafeMath online
 import "https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/master/contracts/utils/math/SafeMath.sol";
 
 contract Lottery { 
@@ -10,11 +10,11 @@ contract Lottery {
     // event & emit
 
     uint public insecureRandomness = 26;
-    //Numele tombolei
+    // name of the raffle
     string lotteryName;
-    // Adresa publica a owner-ului
+    // public address of the owner
     address public owner;
-    // Lista de jucatori
+    // participants list
     address payable[] public players;
     struct lotHist {
         string lotName;
@@ -22,7 +22,7 @@ contract Lottery {
         address payable firstPlace;
         address payable secondPlace;
     } 
-    //Agenda in care se va pastra istoricul
+    // public registry where the raffles will be hold
     lotHist [] public lotteryHistory;
 
     constructor() {
@@ -31,8 +31,8 @@ contract Lottery {
     }
 
     function enter() public payable{
-        // returnez o functie cu length pentru a sti pana unde se citeste
-        // ! poti citi pana la eroare
+        // return a length function in order to see how long is the input
+        // NOTE! You can read untild an error occurs
 
         require(msg.value == .001 ether);
         // address of player -> payable address
@@ -62,14 +62,14 @@ contract Lottery {
     }
 
     function calcMath() public view returns (uint){
-        // Trimit restul la owner
+        // send the rest to the owner
         return address(this).balance.div(100).mul(70) + address(this).balance.div(100).mul(25) + address(this).balance.div(100).mul(5);
     }
 
     function finalizareTombola() public {
         uint firstIndex = getRandomNumber() % players.length;
 
-        // Calcule inainte de transfer
+        // get 70% of the raffle value
         players[firstIndex].transfer(address(this).balance.div(100).mul(70));
 
         uint secondIndex = getRandomNumber() % (players.length);
@@ -80,17 +80,17 @@ contract Lottery {
         }
 
         players[secondIndex].transfer(address(this).balance.div(100).mul(25));
-        // Trimit restul in loc de 5%
+        // send the rest of 5% to the owner of the lottery
         payable(owner).transfer(address(this).balance);
         
         lotteryHistory.push(lotHist(lotteryName, block.timestamp, players[firstIndex], players[secondIndex]));
 
-        // resetam variabilele pentru a crea tombole noi
+        // reset the variables so you can create new raffles
         players = new address payable[](0);
         lotteryName = "";
     }
 
-    // Ownable library
+    // ownable library
     modifier onlyOwner(){
         require(msg.sender == owner);
         _;
