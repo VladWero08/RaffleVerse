@@ -15,7 +15,7 @@ In this solidity contract you will be able to access:
 - get winners: 
   - 1st: 70% of the raffle value
   - 2nd: 25% of the initial raffle value
-  - 3rd: the rest( 5%)
+  - the rest( 5%) is sent to the owner of the raffle
   
 
 
